@@ -1,0 +1,38 @@
+#
+# docker-compose.windows.yml — Windows Docker Desktop compatible
+#
+# Differences from docker-compose.yml:
+#   - Removes `network_mode: host` (not supported on Docker Desktop for Windows)
+#   - Uses explicit port mappings instead
+#   - Uses Windows-style volume path for ~/.anika
+#
+# Usage:
+#   docker compose -f docker-compose.windows.yml up -d
+#
+services:
+  gateway:
+    image: __NEW_ORG__/anika-agent:latest
+    container_name: anika
+    restart: unless-stopped
+    volumes:
+      - ${USERPROFILE}/.anika:/opt/data
+    environment:
+      - ANIKA_UID=10000
+      - ANIKA_GID=10000
+    command: ["gateway", "run"]
+
+  dashboard:
+    image: __NEW_ORG__/anika-agent:latest
+    container_name: anika-dashboard
+    restart: unless-stopped
+    depends_on:
+      - gateway
+    volumes:
+      - ${USERPROFILE}/.anika:/opt/data
+    environment:
+      - ANIKA_UID=10000
+      - ANIKA_GID=10000
+      - ANIKA_DASHBOARD_HOST=0.0.0.0
+    ports:
+      - "127.0.0.1:9119:9119"
+    command: ["dashboard", "--host", "0.0.0.0", "--port", "9119", "--no-open", "--insecure"]

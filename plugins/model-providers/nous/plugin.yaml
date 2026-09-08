@@ -1,0 +1,5 @@
+name: nous-provider
+kind: model-provider
+version: 1.0.0
+description: __NEW_ORG__ Portal
+author: __NEW_ORG__
