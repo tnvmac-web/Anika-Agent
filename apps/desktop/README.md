@@ -1,13 +1,13 @@
 # Anika Desktop ☤
 
 <p align="center">
-  <a href="https://github.com/__NEW_ORG__/anika-agent/releases"><img src="https://img.shields.io/badge/Download-macOS%20%C2%B7%20Windows%20%C2%B7%20Linux-FFD700?style=for-the-badge" alt="Download"></a>
-  <a href="https://anika-agent.__NEW_DOMAIN__/docs/"><img src="https://img.shields.io/badge/Docs-anika--agent.__NEW_DOMAIN__-FFD700?style=for-the-badge" alt="Documentation"></a>
+  <a href="https://github.com/tnvmac-web/Anika-Agent/releases"><img src="https://img.shields.io/badge/Download-macOS%20%C2%B7%20Windows%20%C2%B7%20Linux-FFD700?style=for-the-badge" alt="Download"></a>
+  <a href="https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs"><img src="https://img.shields.io/badge/Docs-GitHub-FFD700?style=for-the-badge" alt="Documentation"></a>
   <a href="https://discord.gg/__NEW_ORG__"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
-  <a href="https://github.com/__NEW_ORG__/anika-agent/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License: MIT"></a>
+  <a href="https://github.com/tnvmac-web/Anika-Agent/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License: MIT"></a>
 </p>
 
-**The native desktop app for [Anika Agent](../../README.md) — the self-improving AI agent from [__NEW_ORG__](https://__NEW_DOMAIN__).** Same agent, same skills, same memory as the CLI and gateway, in a polished native window — chat with streaming tool output, side-by-side previews, a file browser, voice, and settings, no terminal required. Available for **macOS, Windows, and Linux**.
+**The native desktop app for [Anika Agent](../../README.md) — the self-improving AI agent from [__NEW_ORG__](https://github.com/tnvmac-web/Anika-Agent).** Same agent, same skills, same memory as the CLI and gateway, in a polished native window — chat with streaming tool output, side-by-side previews, a file browser, voice, and settings, no terminal required. Available for **macOS, Windows, and Linux**.
 
 <table>
 <tr><td><b>Chat with the full agent</b></td><td>Streaming responses, live tool activity, structured tool summaries, and the same conversation history as every other Anika surface.</td></tr>
@@ -34,7 +34,7 @@ It builds and launches the GUI against your existing install — same config, ke
 
 ### Prebuilt installers
 
-Prebuilt installers are built and distributed via [the Anika Desktop website.](https://anika-agent.__NEW_DOMAIN__/).
+Prebuilt installers are built and distributed on the [GitHub Releases page](https://github.com/tnvmac-web/Anika-Agent/releases).
 
 ---
 
@@ -232,8 +232,8 @@ Remove-Item -Recurse -Force "$env:LOCALAPPDATA\anika\anika-agent\venv"
 ## Community
 
 - 💬 [Discord](https://discord.gg/__NEW_ORG__)
-- 📖 [Documentation](https://anika-agent.__NEW_DOMAIN__/docs/)
-- 🐛 [Issues](https://github.com/__NEW_ORG__/anika-agent/issues)
+- 📖 [Documentation](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs)
+- 🐛 [Issues](https://github.com/tnvmac-web/Anika-Agent/issues)
 
 ---
 
@@ -241,4 +241,4 @@ Remove-Item -Recurse -Force "$env:LOCALAPPDATA\anika\anika-agent\venv"
 
 MIT — see [LICENSE](../../LICENSE).
 
-Built by [__NEW_ORG__](https://__NEW_DOMAIN__).
+Built by [__NEW_ORG__](https://github.com/tnvmac-web/Anika-Agent).
