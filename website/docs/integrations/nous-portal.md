@@ -270,7 +270,7 @@ The Portal routes each model to a suitable backend — some through OpenRouter, 
 /model anthropic/claude-opus-4.6
 ```
 
-If a model is genuinely missing, [open an issue](https://github.com/__NEW_ORG__/anika-agent/issues) — we surface the Portal's catalog to Anika and gaps usually mean a routing config we can update.
+If a model is genuinely missing, [open an issue](https://github.com/tnvmac-web/Anika-Agent/issues) — we surface the Portal's catalog to Anika and gaps usually mean a routing config we can update.
 
 ### Bills not appearing on my Portal account
 

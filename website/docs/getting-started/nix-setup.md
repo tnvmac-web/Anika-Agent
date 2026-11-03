@@ -42,17 +42,17 @@ No clone needed. Nix fetches, builds, and runs everything:
 
 ```bash
 # Run the desktop app
-nix run github:__NEW_ORG__/anika-agent#desktop
+nix run github:tnvmac-web/Anika-Agent#desktop
 
 # Or install persistently
-nix profile install github:__NEW_ORG__/anika-agent#desktop
+nix profile install github:tnvmac-web/Anika-Agent#desktop
 
 # run the tui
-nix run github:__NEW_ORG__/anika-agent -- setup
-nix run github:__NEW_ORG__/anika-agent -- --tui
+nix run github:tnvmac-web/Anika-Agent -- setup
+nix run github:tnvmac-web/Anika-Agent -- --tui
 
 # or install it in your profile
-nix profile install github:__NEW_ORG__/anika-agent
+nix profile install github:tnvmac-web/Anika-Agent
 anika setup
 anika --tui
 ```
@@ -70,8 +70,8 @@ The `default` package adds ~700 MB to the closure. If you only need messaging pl
 <summary><strong>Running from a local clone</strong></summary>
 
 ```bash
-git clone https://github.com/__NEW_ORG__/anika-agent.git
-cd anika-agent
+git clone https://github.com/tnvmac-web/Anika-Agent.git
+cd Anika-Agent
 nix develop
 anika setup
 ```
@@ -95,7 +95,7 @@ This module needs NixOS. Anika is an agent for one person. If you want an agent 
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    anika-agent.url = "github:__NEW_ORG__/anika-agent";
+    anika-agent.url = "github:tnvmac-web/Anika-Agent";
   };
 
   outputs = { nixpkgs, anika-agent, ... }: {
@@ -612,7 +612,7 @@ The option set is the same set that the NixOS module uses. It is `services.anika
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    anika-agent.url = "github:__NEW_ORG__/anika-agent";
+    anika-agent.url = "github:tnvmac-web/Anika-Agent";
   };
 }
 ```
@@ -860,7 +860,7 @@ External flakes can override the package directly:
 
 ```nix
 {
-  inputs.anika-agent.url = "github:__NEW_ORG__/anika-agent";
+  inputs.anika-agent.url = "github:tnvmac-web/Anika-Agent";
   outputs = { anika-agent, nixpkgs, ... }: {
     nixpkgs.overlays = [ anika-agent.overlays.default ];
     # Then:

@@ -15,8 +15,8 @@ Anika isn't just a CLI tool. You can import `AIAgent` directly and use it progra
 Clone Anika and create its supported editable development environment:
 
 ```bash
-git clone https://github.com/__NEW_ORG__/anika-agent.git
-cd anika-agent
+git clone https://github.com/tnvmac-web/Anika-Agent.git
+cd Anika-Agent
 uv sync
 ```
 

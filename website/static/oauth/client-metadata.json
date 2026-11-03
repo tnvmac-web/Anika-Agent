@@ -1,8 +1,8 @@
 {
-  "client_id": "https://__NEW_ORG__.github.io/anika-agent/docs/oauth/client-metadata.json",
+  "client_id": "https://tnvmac-web.github.io/Anika-Agent/docs/oauth/client-metadata.json",
   "client_name": "Anika Agent",
-  "client_uri": "https://anika-agent.__NEW_DOMAIN__",
-  "logo_uri": "https://__NEW_ORG__.github.io/anika-agent/docs/img/logo.png",
+  "client_uri": "https://tnvmac-web.github.io/Anika-Agent/docs/",
+  "logo_uri": "https://tnvmac-web.github.io/Anika-Agent/docs/img/logo.png",
   "application_type": "native",
   "grant_types": ["authorization_code", "refresh_token"],
   "response_types": ["code"],

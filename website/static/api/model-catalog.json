@@ -3,7 +3,7 @@
   "updated_at": "2026-09-05T09:33:43Z",
   "metadata": {
     "source": "anika-agent repo",
-    "docs": "https://anika-agent.__NEW_DOMAIN__/docs/reference/model-catalog"
+    "docs": "https://tnvmac-web.github.io/Anika-Agent/docs/reference/model-catalog"
   },
   "providers": {
     "openrouter": {

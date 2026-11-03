@@ -206,7 +206,7 @@ source ~/.bashrc
 # If you previously installed with sudo, clean up:
 sudo rm /usr/local/bin/anika
 # Then re-run the standard installer
-curl -fsSL https://anika-agent.__NEW_DOMAIN__/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/tnvmac-web/Anika-Agent/main/scripts/install.sh | bash
 ```
 
 ---
@@ -763,7 +763,7 @@ Skills with very long descriptions are truncated to 40 characters in the Telegra
 
 1. Install Anika Agent on the new machine:
    ```bash
-   curl -fsSL https://anika-agent.__NEW_DOMAIN__/install.sh | bash
+   curl -fsSL https://raw.githubusercontent.com/tnvmac-web/Anika-Agent/main/scripts/install.sh | bash
    ```
 
 2. On the **source machine**, create a full backup:
@@ -867,6 +867,6 @@ If using OpenRouter, make sure your API key has credits. A 400 from OpenRouter o
 
 If your issue isn't covered here:
 
-1. **Search existing issues:** [GitHub Issues](https://github.com/__NEW_ORG__/anika-agent/issues)
+1. **Search existing issues:** [GitHub Issues](https://github.com/tnvmac-web/Anika-Agent/issues)
 2. **Ask the community:** [__NEW_ORG__ Discord](https://discord.gg/__NEW_ORG__)
 3. **File a bug report:** Include your OS, Python version (`python3 --version`), Anika version (`anika --version`), and the full error message

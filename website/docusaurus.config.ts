@@ -7,11 +7,11 @@ const config: Config = {
   tagline: 'The self-improving AI agent',
   favicon: 'img/favicon.ico',
 
-  url: 'https://anika-agent.__NEW_DOMAIN__',
-  baseUrl: '/docs/',
+  url: 'https://tnvmac-web.github.io',
+  baseUrl: '/Anika-Agent/docs/',
 
-  organizationName: '__NEW_ORG__',
-  projectName: 'anika-agent',
+  organizationName: 'tnvmac-web',
+  projectName: 'Anika-Agent',
 
   onBrokenLinks: 'warn',
 
@@ -135,7 +135,7 @@ const config: Config = {
           position: 'left',
         },
         {
-          href: 'https://anika-agent.__NEW_DOMAIN__/',
+          href: 'https://github.com/tnvmac-web/Anika-Agent/releases',
           label: 'Download',
           position: 'left',
         },
@@ -144,12 +144,12 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://anika-agent.__NEW_DOMAIN__',
+          href: 'https://github.com/tnvmac-web/Anika-Agent',
           label: 'Home',
           position: 'right',
         },
         {
-          href: 'https://github.com/__NEW_ORG__/anika-agent',
+          href: 'https://github.com/tnvmac-web/Anika-Agent',
           label: 'GitHub',
           position: 'right',
         },
@@ -176,20 +176,20 @@ const config: Config = {
           title: 'Community',
           items: [
             { label: 'Discord', href: 'https://discord.gg/__NEW_ORG__' },
-            { label: 'GitHub Issues', href: 'https://github.com/__NEW_ORG__/anika-agent/issues' },
+            { label: 'GitHub Issues', href: 'https://github.com/tnvmac-web/Anika-Agent/issues' },
             { label: 'Skills Hub', href: 'https://agentskills.io' },
           ],
         },
         {
           title: 'More',
           items: [
-            { label: 'Desktop Download', href: 'https://anika-agent.__NEW_DOMAIN__/' },
-            { label: 'GitHub', href: 'https://github.com/__NEW_ORG__/anika-agent' },
-            { label: '__NEW_ORG__', href: 'https://__NEW_DOMAIN__' },
+            { label: 'Desktop Download', href: 'https://github.com/tnvmac-web/Anika-Agent/releases' },
+            { label: 'GitHub', href: 'https://github.com/tnvmac-web/Anika-Agent' },
+            { label: 'tnvmac-web', href: 'https://github.com/tnvmac-web' },
           ],
         },
       ],
-      copyright: `Built by <a href="https://__NEW_DOMAIN__">__NEW_ORG__</a> · MIT License · ${new Date().getFullYear()}`,
+      copyright: `Built by <a href="https://github.com/tnvmac-web">tnvmac-web</a> · MIT License · ${new Date().getFullYear()}`,
     },
     prism: {
       theme: prismThemes.github,
