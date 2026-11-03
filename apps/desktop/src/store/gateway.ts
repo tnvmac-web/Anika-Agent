@@ -1,8 +1,8 @@
 import { type ConnectionState, type GatewayEvent, registryBackendScopeKey, resolveGatewayWsUrl } from '@anika/shared'
 import { atom } from 'nanostores'
 
-import type { AnikaConnection } from '@/global'
 import { AnikaGateway, setApiRequestConnection } from '@/anika'
+import type { AnikaConnection } from '@/global'
 import { reconnectBackoffDelayMs } from '@/lib/reconnect-backoff'
 import { RECONNECT_ATTEMPT_TIMEOUT_MS, withTimeout } from '@/lib/with-timeout'
 import { markNativeNotifyBaseline } from '@/store/notify-baseline'

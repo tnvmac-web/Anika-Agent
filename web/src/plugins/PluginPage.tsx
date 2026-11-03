@@ -1,5 +1,5 @@
 import { useSyncExternalStore } from "react";
-import { Spinner } from "@__NEW_ORG__/ui/ui/components/spinner";
+import { Spinner } from "@nous-research/ui/ui/components/spinner";
 import {
   getPluginComponent,
   getPluginLoadError,

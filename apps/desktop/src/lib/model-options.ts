@@ -1,4 +1,4 @@
-import { getGlobalModelOptions, type AnikaGateway, type ModelOptionsResponse } from '@/anika'
+import { type AnikaGateway, getGlobalModelOptions, type ModelOptionsResponse } from '@/anika'
 import type { ModelOptionProvider } from '@/types/anika'
 
 /**

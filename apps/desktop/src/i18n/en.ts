@@ -205,7 +205,7 @@ export const en: Translations = {
   },
 
   billingBlock: {
-    titleNous: 'Out of __NEW_ORG__ credits',
+    titleNous: 'Out of Nous credits',
     titleProvider: provider => `Out of credits — ${provider}`,
     fallbackMessage: 'Your account is out of credits. Add credits to keep going.',
     openBilling: 'Open billing',

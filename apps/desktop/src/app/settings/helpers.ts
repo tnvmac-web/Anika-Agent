@@ -1,5 +1,5 @@
 import { asText, normalize } from '@/lib/text'
-import type { ConfigFieldSchema, AnikaConfigRecord, ToolsetInfo } from '@/types/anika'
+import type { AnikaConfigRecord, ConfigFieldSchema, ToolsetInfo } from '@/types/anika'
 
 import { BUILTIN_PERSONALITIES, ENUM_OPTIONS, PROVIDER_GROUPS, SECTIONS } from './constants'
 

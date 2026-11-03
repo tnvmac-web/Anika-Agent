@@ -1,7 +1,7 @@
 import { useStore } from '@nanostores/react'
 
-import { ModelVisibilityDialog } from '@/components/model-visibility-dialog'
 import type { AnikaGateway } from '@/anika'
+import { ModelVisibilityDialog } from '@/components/model-visibility-dialog'
 import { $modelVisibilityOpen, setModelVisibilityOpen } from '@/store/model-visibility'
 import { $activeSessionId, $gatewayState } from '@/store/session'
 

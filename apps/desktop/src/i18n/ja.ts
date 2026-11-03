@@ -207,7 +207,7 @@ export const ja = defineLocale({
   },
 
   billingBlock: {
-    titleNous: '__NEW_ORG__ クレジットが不足しています',
+    titleNous: 'Nous クレジットが不足しています',
     titleProvider: provider => `クレジット不足 — ${provider}`,
     fallbackMessage: 'アカウントのクレジットが不足しています。続行するにはクレジットを追加してください。',
     openBilling: '請求を開く',

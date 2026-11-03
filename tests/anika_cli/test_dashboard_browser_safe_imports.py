@@ -1,4 +1,4 @@
-"""Static dashboard tests for browser-safe @__NEW_ORG__/ui imports."""
+"""Static dashboard tests for browser-safe @nous-research/ui imports."""
 from pathlib import Path
 
 
@@ -10,7 +10,7 @@ def test_dashboard_does_not_import_nous_ui_root_barrel():
     for ext in ("*.tsx", "*.ts"):
         for path in WEB_SRC.rglob(ext):
             content = path.read_text(encoding="utf-8")
-            if 'from "@__NEW_ORG__/ui"' in content or "from '@__NEW_ORG__/ui'" in content:
+            if 'from "@nous-research/ui"' in content or "from '@nous-research/ui'" in content:
                 offenders.append(str(path.relative_to(WEB_SRC)))
 
     assert offenders == []

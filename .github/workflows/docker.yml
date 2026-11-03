@@ -27,7 +27,7 @@ concurrency:
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 env:
-  IMAGE_NAME: __NEW_ORG__/anika-agent
+  IMAGE_NAME: tnvmac-web/anika-agent
 
 jobs:
   # Classify the PR's changed files. ci.yml used to gate the docker call on
@@ -70,7 +70,7 @@ jobs:
   # protected publish job after these tests pass.
   build:
     needs: [detect]
-    if: github.repository == '__NEW_ORG__/anika-agent' && needs.detect.outputs.build == 'true'
+    if: github.repository == 'tnvmac-web/Anika-Agent' && needs.detect.outputs.build == 'true'
     strategy:
       fail-fast: false
       matrix:
@@ -185,7 +185,7 @@ jobs:
   # matrix passes. This job is the sole Docker Hub credential boundary.
   # ---------------------------------------------------------------------------
   publish:
-    if: github.repository == '__NEW_ORG__/anika-agent' && (github.event_name == 'push' && github.ref == 'refs/heads/main' || github.event_name == 'release')
+    if: github.repository == 'tnvmac-web/Anika-Agent' && (github.event_name == 'push' && github.ref == 'refs/heads/main' || github.event_name == 'release')
     needs: [build]
     environment: container-publish
     strategy:
@@ -269,7 +269,7 @@ jobs:
   # On releases: tags :<release_tag_name>.
   # ---------------------------------------------------------------------------
   merge:
-    if: github.repository == '__NEW_ORG__/anika-agent' && (github.event_name == 'push' && github.ref == 'refs/heads/main' || github.event_name == 'release')
+    if: github.repository == 'tnvmac-web/Anika-Agent' && (github.event_name == 'push' && github.ref == 'refs/heads/main' || github.event_name == 'release')
     runs-on: ubuntu-latest
     needs: [publish]
     timeout-minutes: 10

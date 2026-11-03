@@ -1,5 +1,5 @@
-import type { Unstable_TriggerItem } from '@assistant-ui/core'
 import type { ConnectionState } from '@anika/shared'
+import type { Unstable_TriggerItem } from '@assistant-ui/core'
 
 import type { SlashChipKind } from '@/components/assistant-ui/directive-text'
 import type { ComposerAttachment } from '@/store/composer'

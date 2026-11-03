@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 
 import { Settings2, Wrench } from '@/lib/icons'
-import type { ConfigFieldSchema, AnikaConfigRecord } from '@/types/anika'
+import type { AnikaConfigRecord, ConfigFieldSchema } from '@/types/anika'
 
 import {
   buildConfigSearchEntries,

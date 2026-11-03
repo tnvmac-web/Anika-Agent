@@ -12,9 +12,9 @@
 import './kanban.css'
 
 import {
+  type AnikaPlugin,
   cn,
   Codicon,
-  type AnikaPlugin,
   host,
   type KeybindContribution,
   KEYBINDS_AREA,

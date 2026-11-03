@@ -27,13 +27,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/__NEW_ORG__/Anika-Agent.git"
+    "url": "git+https://github.com/tnvmac-web/Anika-Agent.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/__NEW_ORG__/Anika-Agent/issues"
+    "url": "https://github.com/tnvmac-web/Anika-Agent/issues"
   },
-  "homepage": "https://github.com/__NEW_ORG__/Anika-Agent#readme",
+  "homepage": "https://github.com/tnvmac-web/Anika-Agent#readme",
   "devDependencies": {
     "@eslint/js": "9.39.5",
     "typescript-eslint": "8.64.0",

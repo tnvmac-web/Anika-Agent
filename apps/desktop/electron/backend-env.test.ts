@@ -4,10 +4,10 @@ import path from 'node:path'
 import { test } from 'vitest'
 
 import {
+  anikaManagedNodePathEntries,
   appendUniquePathEntries,
   buildDesktopBackendEnv,
   buildDesktopBackendPath,
-  anikaManagedNodePathEntries,
   normalizeAnikaHomeRoot,
   pathEnvKey,
   POSIX_SANE_PATH_ENTRIES

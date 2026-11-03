@@ -48,7 +48,7 @@ import {
 import { dashboardFallbackArgs, sourceDeclaresServe } from './backend-command'
 import { createBackendConnectionState } from './backend-connection-state'
 import { BackendDialClaims } from './backend-dial-claim'
-import { buildDesktopBackendEnv, anikaManagedNodePathEntries, normalizeAnikaHomeRoot } from './backend-env'
+import { anikaManagedNodePathEntries, buildDesktopBackendEnv, normalizeAnikaHomeRoot } from './backend-env'
 import {
   isReauthRequiredError,
   makeNousCloudBackendDownError,
@@ -429,13 +429,13 @@ import {
   MIN_HEIGHT as WINDOW_MIN_HEIGHT,
   MIN_WIDTH as WINDOW_MIN_WIDTH
 } from './window-state'
-import { hiddenWindowsChildOptions } from './windows-child-options'
 import {
   buildPathExtCandidates,
   chooseUpdaterArgs,
   getVenvSitePackagesEntries,
   resolveVenvAnikaCommand
 } from './windows-anika-path'
+import { hiddenWindowsChildOptions } from './windows-child-options'
 import {
   connectWindowsRemote,
   detectRemotePlatform,

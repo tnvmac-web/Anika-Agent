@@ -2,10 +2,10 @@ import { useStore } from '@nanostores/react'
 import { useCallback, useEffect, useMemo, useRef } from 'react'
 import { useLocation, useNavigate } from 'react-router'
 
+import { getAnikaConfigDefaults, getAnikaConfigRecord, saveAnikaConfig } from '@/anika'
 import { codiconIcon } from '@/components/ui/codicon'
 import { KbdCombo } from '@/components/ui/kbd'
 import { Tip } from '@/components/ui/tooltip'
-import { getAnikaConfigDefaults, getAnikaConfigRecord, saveAnikaConfig } from '@/anika'
 import { useI18n } from '@/i18n'
 import { triggerHaptic } from '@/lib/haptics'
 import {

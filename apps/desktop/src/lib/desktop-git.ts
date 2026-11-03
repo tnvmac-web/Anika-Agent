@@ -1,3 +1,4 @@
+import { anikaApi } from '@/anika'
 import type {
   AnikaGitBaseBranch,
   AnikaGitBranch,
@@ -7,7 +8,6 @@ import type {
   AnikaReviewList,
   AnikaReviewShipInfo
 } from '@/global'
-import { anikaApi } from '@/anika'
 
 import { desktopFsProfile, isDesktopFsRemoteMode } from './desktop-fs'
 

@@ -1,11 +1,11 @@
 import type {
+  AnikaConfig,
+  AnikaConfigRecord,
   ConfigSchemaResponse,
   CustomEndpointsResponse,
   CustomEndpointUpdate,
   CustomEndpointValidationResponse,
   EnvVarInfo,
-  AnikaConfig,
-  AnikaConfigRecord,
   LogsResponse,
   OAuthPollResponse,
   OAuthProvidersResponse,
@@ -14,7 +14,7 @@ import type {
   StatusResponse
 } from '@/types/anika'
 
-import { capabilityScoped, anikaApi, type ProfileScope, profileScoped, STARTUP_REQUEST_TIMEOUT_MS } from './client'
+import { anikaApi, capabilityScoped, type ProfileScope, profileScoped, STARTUP_REQUEST_TIMEOUT_MS } from './client'
 
 export function getStatus(): Promise<StatusResponse> {
   return anikaApi<StatusResponse>({

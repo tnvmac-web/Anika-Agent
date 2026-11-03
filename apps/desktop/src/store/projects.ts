@@ -1,5 +1,6 @@
 import { atom } from 'nanostores'
 
+import { anikaApi, type AnikaGateway, getAnikaConfig } from '@/anika'
 import type { NewSessionPlacement } from '@/app/chat/new-session-drag'
 import {
   liveSessionProjectId,
@@ -7,7 +8,6 @@ import {
   type SidebarProjectTree
 } from '@/app/chat/sidebar/projects/workspace-groups'
 import type { AnikaGitBaseBranch, AnikaGitBranch } from '@/global'
-import { getAnikaConfig, anikaApi, type AnikaGateway } from '@/anika'
 import { translateNow } from '@/i18n'
 import { desktopDefaultCwd, isDesktopFsRemoteMode, selectDesktopPaths, writeDesktopFileText } from '@/lib/desktop-fs'
 import { desktopGit } from '@/lib/desktop-git'

@@ -5,10 +5,10 @@
 // capabilityScoped are shared across api/ but must not reach call sites, or
 // request scoping stops having a single owner.
 export {
-  getApiRequestConnection,
-  getApiRequestProfile,
   anikaApi,
   AnikaGateway,
+  getApiRequestConnection,
+  getApiRequestProfile,
   profileScopeKey,
   PROMPT_SUBMIT_REQUEST_TIMEOUT_MS,
   setApiRequestConnection,
@@ -38,6 +38,8 @@ export type {
   AnalyticsSkillEntry,
   AnalyticsSkillsSummary,
   AnalyticsTotals,
+  AnikaConfig,
+  AnikaConfigRecord,
   AudioSpeakResponse,
   AudioTranscriptionResponse,
   AudioTtsLeaseResponse,
@@ -65,8 +67,6 @@ export type {
   ElevenLabsVoicesResponse,
   EnvVarInfo,
   GatewayReadyPayload,
-  AnikaConfig,
-  AnikaConfigRecord,
   LogsResponse,
   McpCatalogEntry,
   McpCatalogResponse,
