@@ -210,10 +210,10 @@ function verifyAnikaCli(anikaCommand: string, opts?: { shell?: boolean }) {
 }
 
 export {
+  anikaRuntimeImportProbe,
   canImportAnikaCli,
   DEFAULT_PROBE_TIMEOUT_MS,
   execProbeSync,
-  anikaRuntimeImportProbe,
   PROBE_TIMEOUT_MS,
   resolveProbeTimeoutMs,
   shouldTrustAnikaOverride,

@@ -1,9 +1,9 @@
 import type * as React from 'react'
 import { useRef } from 'react'
 
+import type { SessionInfo } from '@/anika'
 import { type NewSessionSplitHandler, startNewSessionDrag } from '@/app/chat/new-session-drag'
 import { Codicon } from '@/components/ui/codicon'
-import type { SessionInfo } from '@/anika'
 import { useI18n } from '@/i18n'
 import { cn } from '@/lib/utils'
 

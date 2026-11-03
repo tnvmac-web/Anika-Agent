@@ -1,6 +1,6 @@
 import { createContext, type ReactNode, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
 
-import { getAnikaConfigRecord, type AnikaConfigRecord, saveAnikaConfig } from '@/anika'
+import { type AnikaConfigRecord, getAnikaConfigRecord, saveAnikaConfig } from '@/anika'
 
 import { TRANSLATIONS } from './catalog'
 import { DEFAULT_LOCALE, localeConfigValue, normalizeLocale } from './languages'

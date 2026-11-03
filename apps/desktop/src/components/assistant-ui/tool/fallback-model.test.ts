@@ -160,7 +160,7 @@ describe('buildToolView browser_navigate title', () => {
     )
 
     expect(view.status).toBe('error')
-    expect(view.title).toBe('Failed to open anika-agent.__NEW_DOMAIN__/docs')
+    expect(view.title).toBe('Failed to open anika-agent.__new_domain__/docs')
   })
 
   it('shows opened title on success', () => {
@@ -174,7 +174,7 @@ describe('buildToolView browser_navigate title', () => {
     )
 
     expect(view.status).toBe('success')
-    expect(view.title).toBe('Opened anika-agent.__NEW_DOMAIN__/docs')
+    expect(view.title).toBe('Opened anika-agent.__new_domain__/docs')
   })
 })
 

@@ -9,7 +9,7 @@ import type {
 } from '@/types/anika'
 import type { ActionResponse } from '@/types/anika'
 
-import { capabilityScoped, anikaApi, type ProfileScope, profileScoped } from './client'
+import { anikaApi, capabilityScoped, type ProfileScope, profileScoped } from './client'
 
 export function getSkills(profile?: ProfileScope): Promise<SkillInfo[]> {
   return window.anikaDesktop.api<SkillInfo[]>({

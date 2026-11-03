@@ -12,18 +12,18 @@ import type {
   MemoryProviderSetupResult,
   PluginsHubResponse,
 } from "@/lib/api";
-import { Button } from "@__NEW_ORG__/ui/ui/components/button";
-import { Badge } from "@__NEW_ORG__/ui/ui/components/badge";
-import { Select, SelectOption } from "@__NEW_ORG__/ui/ui/components/select";
-import { Switch } from "@__NEW_ORG__/ui/ui/components/switch";
-import { Spinner } from "@__NEW_ORG__/ui/ui/components/spinner";
-import { CommandBlock, CopyButton } from "@__NEW_ORG__/ui/ui/components/command-block";
-import { Card, CardContent, CardHeader, CardTitle } from "@__NEW_ORG__/ui/ui/components/card";
-import { ConfirmDialog } from "@__NEW_ORG__/ui/ui/components/confirm-dialog";
-import { Input } from "@__NEW_ORG__/ui/ui/components/input";
-import { Label } from "@__NEW_ORG__/ui/ui/components/label";
-import { useToast } from "@__NEW_ORG__/ui/hooks/use-toast";
-import { Toast } from "@__NEW_ORG__/ui/ui/components/toast";
+import { Button } from "@nous-research/ui/ui/components/button";
+import { Badge } from "@nous-research/ui/ui/components/badge";
+import { Select, SelectOption } from "@nous-research/ui/ui/components/select";
+import { Switch } from "@nous-research/ui/ui/components/switch";
+import { Spinner } from "@nous-research/ui/ui/components/spinner";
+import { CommandBlock, CopyButton } from "@nous-research/ui/ui/components/command-block";
+import { Card, CardContent, CardHeader, CardTitle } from "@nous-research/ui/ui/components/card";
+import { ConfirmDialog } from "@nous-research/ui/ui/components/confirm-dialog";
+import { Input } from "@nous-research/ui/ui/components/input";
+import { Label } from "@nous-research/ui/ui/components/label";
+import { useToast } from "@nous-research/ui/hooks/use-toast";
+import { Toast } from "@nous-research/ui/ui/components/toast";
 import { useI18n } from "@/i18n";
 import { PluginSlot } from "@/plugins";
 import { cn } from "@/lib/utils";

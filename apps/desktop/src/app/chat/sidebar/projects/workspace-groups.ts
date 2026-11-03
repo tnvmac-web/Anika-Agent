@@ -1,5 +1,5 @@
-import type { AnikaGitWorktree } from '@/global'
 import type { ProjectInfo, SessionInfo } from '@/anika'
+import type { AnikaGitWorktree } from '@/global'
 import { normalize } from '@/lib/text'
 
 import { rankSessions } from '../order'

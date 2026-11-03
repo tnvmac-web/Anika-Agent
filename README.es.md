@@ -4,19 +4,19 @@
 
 # Anika Agent ☤
 <p align="center">
-  <a href="https://anika-agent.__NEW_DOMAIN__/">Anika Agent</a> | <a href="https://anika-agent.__NEW_DOMAIN__/">Anika Desktop</a>
+  <a href="https://github.com/tnvmac-web/Anika-Agent">Anika Agent</a> | <a href="https://github.com/tnvmac-web/Anika-Agent/releases">Anika Desktop</a>
 </p>
 <p align="center">
-  <a href="https://anika-agent.__NEW_DOMAIN__/docs/"><img src="https://img.shields.io/badge/Docs-anika--agent.__NEW_DOMAIN__-FFD700?style=for-the-badge" alt="Documentación"></a>
+  <a href="https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs"><img src="https://img.shields.io/badge/Docs-GitHub-FFD700?style=for-the-badge" alt="Documentación"></a>
   <a href="https://discord.gg/__NEW_ORG__"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
-  <a href="https://github.com/__NEW_ORG__/anika-agent/blob/main/LICENSE"><img src="https://img.shields.io/badge/Licencia-MIT-green?style=for-the-badge" alt="Licencia: MIT"></a>
-  <a href="https://__NEW_DOMAIN__"><img src="https://img.shields.io/badge/Creado%20por-__NEW_ORG__-blueviolet?style=for-the-badge" alt="Creado por __NEW_ORG__"></a>
+  <a href="https://github.com/tnvmac-web/Anika-Agent/blob/main/LICENSE"><img src="https://img.shields.io/badge/Licencia-MIT-green?style=for-the-badge" alt="Licencia: MIT"></a>
+  <a href="https://github.com/tnvmac-web/Anika-Agent"><img src="https://img.shields.io/badge/Creado%20por-__NEW_ORG__-blueviolet?style=for-the-badge" alt="Creado por __NEW_ORG__"></a>
   <a href="README.md"><img src="https://img.shields.io/badge/Lang-English-blue?style=for-the-badge" alt="English"></a>
   <a href="README.zh-CN.md"><img src="https://img.shields.io/badge/Lang-中文-red?style=for-the-badge" alt="中文"></a>
   <a href="README.ur-pk.md"><img src="https://img.shields.io/badge/Lang-اردو-green?style=for-the-badge" alt="اردو"></a>
 </p>
 
-**El agente de IA con mejora continua creado por [__NEW_ORG__](https://__NEW_DOMAIN__).** Es el único agente con un bucle de aprendizaje integrado: crea habilidades a partir de la experiencia, las mejora durante el uso, se impulsa a sí mismo a persistir el conocimiento, busca en sus propias conversaciones pasadas y construye un modelo cada vez más profundo de quién eres a lo largo de las sesiones. Ejecútalo en un VPS de $5, un clúster de GPUs o infraestructura sin servidor que cuesta casi nada cuando está inactivo. No está atado a tu laptop — habla con él desde Telegram mientras trabaja en una VM en la nube.
+**El agente de IA con mejora continua creado por [__NEW_ORG__](https://github.com/tnvmac-web/Anika-Agent).** Es el único agente con un bucle de aprendizaje integrado: crea habilidades a partir de la experiencia, las mejora durante el uso, se impulsa a sí mismo a persistir el conocimiento, busca en sus propias conversaciones pasadas y construye un modelo cada vez más profundo de quién eres a lo largo de las sesiones. Ejecútalo en un VPS de $5, un clúster de GPUs o infraestructura sin servidor que cuesta casi nada cuando está inactivo. No está atado a tu laptop — habla con él desde Telegram mientras trabaja en una VM en la nube.
 
 Usa cualquier modelo que quieras — [__NEW_ORG__ Portal](https://portal.__NEW_DOMAIN__), [OpenRouter](https://openrouter.ai) (más de 200 modelos), [NovitaAI](https://novita.ai), [NVIDIA NIM](https://build.nvidia.com) (Nemotron), [Xiaomi MiMo](https://platform.xiaomimimo.com), [z.ai/GLM](https://z.ai), [Kimi/Moonshot](https://platform.moonshot.ai), [MiniMax](https://www.minimax.io), [Hugging Face](https://huggingface.co), OpenAI, o tu propio endpoint. Cambia con `anika model` — sin cambios de código, sin dependencias.
 
@@ -34,28 +34,40 @@ Usa cualquier modelo que quieras — [__NEW_ORG__ Portal](https://portal.__NEW_D
 
 ## Instalación rápida
 
-### Linux, macOS, WSL2, Termux
+### Linux, macOS, WSL2
 
 ```bash
-curl -fsSL https://anika-agent.__NEW_DOMAIN__/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/tnvmac-web/Anika-Agent/main/scripts/install.sh | bash
 ```
+
+### Android (Termux)
+
+```bash
+pkg update
+pkg install -y git python clang rust make pkg-config libffi openssl ca-certificates curl
+curl -fsSL https://raw.githubusercontent.com/tnvmac-web/Anika-Agent/main/scripts/install.sh | bash
+```
+
+El instalador selecciona Python `>=3.11,<3.14`, prueba el perfil `.[termux-all]`
+y usa `.[termux]` como alternativa. No instales `.[all]` en Android: incluye
+dependencias que no son compatibles con Termux. Consulta la
+[guía de instalación de Termux](https://github.com/tnvmac-web/Anika-Agent/blob/main/website/docs/getting-started/termux.md)
+para los pasos manuales y las limitaciones.
 
 ### Windows (nativo, PowerShell)
 
-> **Nota:** En Windows nativo, Anika funciona sin WSL — la CLI, el gateway, la TUI y las herramientas funcionan de forma nativa. Si prefieres usar WSL2, el comando de Linux/macOS de arriba también funciona allí. ¿Encontraste un error? Por favor [crea un issue](https://github.com/__NEW_ORG__/anika-agent/issues).
+> **Nota:** En Windows nativo, Anika funciona sin WSL — la CLI, el gateway, la TUI y las herramientas funcionan de forma nativa. Si prefieres usar WSL2, el comando de Linux/macOS de arriba también funciona allí. ¿Encontraste un error? Por favor [crea un issue](https://github.com/tnvmac-web/Anika-Agent/issues).
 
 Ejecuta esto en PowerShell:
 
 ```powershell
-iex (irm https://anika-agent.__NEW_DOMAIN__/install.ps1)
+iex (irm https://raw.githubusercontent.com/tnvmac-web/Anika-Agent/main/scripts/install.ps1)
 ```
 
 El instalador se encarga de todo: uv, Python 3.11, Node.js, ripgrep, ffmpeg, **y un Git Bash portátil** (MinGit, descomprimido en `%LOCALAPPDATA%\anika\git` — no requiere administrador, completamente aislado de cualquier instalación de Git del sistema). Anika usa este Git Bash incluido para ejecutar comandos de shell.
 
 Si ya tienes Git instalado, el instalador lo detecta y lo usa en su lugar. De lo contrario, una descarga de ~45MB de MinGit es todo lo que necesitas — no tocará ni interferirá con ningún Git del sistema.
 
-> **Android / Termux:** La ruta manual probada está documentada en la [guía de Termux](https://anika-agent.__NEW_DOMAIN__/docs/getting-started/termux). En Termux, Anika instala el extra `.[termux]` curado porque el extra completo `.[all]` actualmente incluye dependencias de voz incompatibles con Android.
->
 > **Windows:** Windows nativo es totalmente compatible — el comando de PowerShell de arriba instala todo. Si prefieres usar WSL2, el comando de Linux también funciona allí. La instalación nativa de Windows se encuentra en `%LOCALAPPDATA%\anika`; WSL2 instala en `~/.anika` como en Linux.
 
 Después de la instalación:
@@ -81,7 +93,7 @@ anika update       # Actualiza a la última versión
 anika doctor       # Diagnostica cualquier problema
 ```
 
-📖 **[Documentación completa →](https://anika-agent.__NEW_DOMAIN__/docs/)**
+📖 **[Documentación completa →](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs)**
 
 ---
 
@@ -98,7 +110,7 @@ Un comando desde una instalación nueva:
 anika setup --portal
 ```
 
-Esto te autentica vía OAuth, establece __NEW_ORG__ como tu proveedor y activa el Tool Gateway. Comprueba qué está conectado en cualquier momento con `anika portal info`. Detalles completos en la [página de documentación del Tool Gateway](https://anika-agent.__NEW_DOMAIN__/docs/user-guide/features/tool-gateway).
+Esto te autentica vía OAuth, establece __NEW_ORG__ como tu proveedor y activa el Tool Gateway. Comprueba qué está conectado en cualquier momento con `anika portal info`. Detalles completos en la [página de documentación del Tool Gateway](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs).
 
 Puedes seguir usando tus propias claves por herramienta cuando quieras — el gateway es por backend, no todo o nada.
 
@@ -120,31 +132,31 @@ Anika tiene dos puntos de entrada: inicia la interfaz de terminal con `anika`, o
 | Interrumpir trabajo actual          | `Ctrl+C` o enviar un nuevo mensaje            | `/stop` o enviar un nuevo mensaje                                                 |
 | Estado específico de plataforma     | `/platforms`                                  | `/status`, `/sethome`                                                             |
 
-Para las listas de comandos completas, consulta la [guía de CLI](https://anika-agent.__NEW_DOMAIN__/docs/user-guide/cli) y la [guía del Gateway de Mensajería](https://anika-agent.__NEW_DOMAIN__/docs/user-guide/messaging).
+Para las listas de comandos completas, consulta la [guía de CLI](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs) y la [guía del Gateway de Mensajería](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs).
 
 ---
 
 ## Documentación
 
-Toda la documentación está en **[anika-agent.__NEW_DOMAIN__/docs](https://anika-agent.__NEW_DOMAIN__/docs/)**:
+Toda la documentación está en la **[carpeta de documentación del repositorio](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs)**:
 
 | Sección                                                                                             | Contenido                                                    |
 | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| [Inicio rápido](https://anika-agent.__NEW_DOMAIN__/docs/getting-started/quickstart)              | Instalar → configurar → primera conversación en 2 minutos   |
-| [Uso de CLI](https://anika-agent.__NEW_DOMAIN__/docs/user-guide/cli)                             | Comandos, atajos de teclado, personalidades, sesiones        |
-| [Configuración](https://anika-agent.__NEW_DOMAIN__/docs/user-guide/configuration)               | Archivo de configuración, proveedores, modelos, todas las opciones |
-| [Gateway de Mensajería](https://anika-agent.__NEW_DOMAIN__/docs/user-guide/messaging)           | Telegram, Discord, Slack, WhatsApp, Signal, Home Assistant   |
-| [Seguridad](https://anika-agent.__NEW_DOMAIN__/docs/user-guide/security)                        | Aprobación de comandos, emparejamiento por DM, aislamiento en contenedor |
-| [Herramientas y Toolsets](https://anika-agent.__NEW_DOMAIN__/docs/user-guide/features/tools)   | Más de 40 herramientas, sistema de toolsets, backends de terminal |
-| [Sistema de Habilidades](https://anika-agent.__NEW_DOMAIN__/docs/user-guide/features/skills)   | Memoria procedimental, Skills Hub, creación de habilidades   |
-| [Memoria](https://anika-agent.__NEW_DOMAIN__/docs/user-guide/features/memory)                   | Memoria persistente, perfiles de usuario, mejores prácticas  |
-| [Integración MCP](https://anika-agent.__NEW_DOMAIN__/docs/user-guide/features/mcp)              | Conecta cualquier servidor MCP para capacidades extendidas   |
-| [Programación Cron](https://anika-agent.__NEW_DOMAIN__/docs/user-guide/features/cron)           | Tareas programadas con entrega a plataforma                  |
-| [Archivos de Contexto](https://anika-agent.__NEW_DOMAIN__/docs/user-guide/features/context-files) | Contexto de proyecto que da forma a cada conversación      |
-| [Arquitectura](https://anika-agent.__NEW_DOMAIN__/docs/developer-guide/architecture)            | Estructura del proyecto, bucle del agente, clases principales |
-| [Contribuir](https://anika-agent.__NEW_DOMAIN__/docs/developer-guide/contributing)              | Configuración de desarrollo, proceso de PR, estilo de código |
-| [Referencia de CLI](https://anika-agent.__NEW_DOMAIN__/docs/reference/cli-commands)             | Todos los comandos y flags                                   |
-| [Variables de Entorno](https://anika-agent.__NEW_DOMAIN__/docs/reference/environment-variables) | Referencia completa de variables de entorno                  |
+| [Inicio rápido](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs)              | Instalar → configurar → primera conversación en 2 minutos   |
+| [Uso de CLI](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs)                             | Comandos, atajos de teclado, personalidades, sesiones        |
+| [Configuración](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs)               | Archivo de configuración, proveedores, modelos, todas las opciones |
+| [Gateway de Mensajería](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs)           | Telegram, Discord, Slack, WhatsApp, Signal, Home Assistant   |
+| [Seguridad](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs)                        | Aprobación de comandos, emparejamiento por DM, aislamiento en contenedor |
+| [Herramientas y Toolsets](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs)   | Más de 40 herramientas, sistema de toolsets, backends de terminal |
+| [Sistema de Habilidades](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs)   | Memoria procedimental, Skills Hub, creación de habilidades   |
+| [Memoria](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs)                   | Memoria persistente, perfiles de usuario, mejores prácticas  |
+| [Integración MCP](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs)              | Conecta cualquier servidor MCP para capacidades extendidas   |
+| [Programación Cron](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs)           | Tareas programadas con entrega a plataforma                  |
+| [Archivos de Contexto](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs) | Contexto de proyecto que da forma a cada conversación      |
+| [Arquitectura](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs)            | Estructura del proyecto, bucle del agente, clases principales |
+| [Contribuir](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs)              | Configuración de desarrollo, proceso de PR, estilo de código |
+| [Referencia de CLI](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs)             | Todos los comandos y flags                                   |
+| [Variables de Entorno](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs) | Referencia completa de variables de entorno                  |
 
 ---
 
@@ -185,8 +197,8 @@ Consulta `anika claw migrate --help` para todas las opciones, o usa la habilidad
 Inicio rápido para colaboradores — clona y comienza con `setup-anika.sh`:
 
 ```bash
-git clone https://github.com/__NEW_ORG__/anika-agent.git
-cd anika-agent
+git clone https://github.com/tnvmac-web/Anika-Agent.git
+cd Anika-Agent
 ./setup-anika.sh     # instala uv, crea venv, instala .[all], enlaza ~/.local/bin/anika
 ./anika              # detecta automáticamente el venv, no necesitas hacer `source` primero
 ```
@@ -207,7 +219,7 @@ scripts/run_tests.sh
 
 - 💬 [Discord](https://discord.gg/__NEW_ORG__)
 - 📚 [Skills Hub](https://agentskills.io)
-- 🐛 [Issues](https://github.com/__NEW_ORG__/anika-agent/issues)
+- 🐛 [Issues](https://github.com/tnvmac-web/Anika-Agent/issues)
 - 🔌 [computer-use-linux](https://github.com/avifenesh/computer-use-linux) — Servidor MCP de control de escritorio Linux para Anika y otros hosts MCP, con árboles de accesibilidad AT-SPI, entrada Wayland/X11, capturas de pantalla y targeting de ventanas del compositor.
 - 🔌 [AnikaClaw](https://github.com/AaronWong1999/anikaclaw) — Puente WeChat comunitario: Ejecuta Anika Agent y OpenClaw en la misma cuenta de WeChat.
 
@@ -217,4 +229,4 @@ scripts/run_tests.sh
 
 MIT — ver [LICENSE](LICENSE).
 
-Creado por [__NEW_ORG__](https://__NEW_DOMAIN__).
+Creado por [__NEW_ORG__](https://github.com/tnvmac-web/Anika-Agent).

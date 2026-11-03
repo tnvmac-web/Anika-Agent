@@ -1,5 +1,5 @@
+import { anikaApi, getApiRequestConnection, getApiRequestProfile } from '@/anika'
 import { profileScoped } from '@/api/client'
-import { getApiRequestConnection, getApiRequestProfile, anikaApi } from '@/anika'
 
 /**
  * Client-direct voice: call the active profile's STT/TTS providers straight

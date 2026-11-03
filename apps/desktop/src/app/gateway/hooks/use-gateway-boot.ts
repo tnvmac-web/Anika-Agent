@@ -1,9 +1,9 @@
 import { isGatewayReauthRequired, JsonRpcGatewayError, resolveGatewayWsUrl } from '@anika/shared'
 import { useEffect, useRef } from 'react'
 
+import { AnikaGateway } from '@/anika'
 import { shouldApplyPostBootProgressError } from '@/components/boot-failure-reauth'
 import type { AnikaConnection } from '@/global'
-import { AnikaGateway } from '@/anika'
 import { translateNow } from '@/i18n'
 import { desktopDefaultCwd } from '@/lib/desktop-fs'
 import { decideLivenessForceClose, LIVENESS_REPROBE_DELAY_MS } from '@/lib/gateway-liveness-policy'

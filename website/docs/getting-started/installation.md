@@ -15,21 +15,21 @@ platform-gated features are supported), see **[Platform Support](./platform-supp
 
 ## Quick Install
 ### With the Anika Desktop installer on macOS or Windows (recommended)
-To easily install the command-line and desktop applications, [download the Anika Desktop installer](https://anika-agent.__NEW_DOMAIN__/) from our website and run it.
+To easily install the command-line and desktop applications, [download the Anika Desktop installer](https://github.com/tnvmac-web/Anika-Agent/releases) from GitHub Releases and run it.
 
 ### Without Anika Desktop:
 For a command-line only install without Anika Desktop, run:
 
 #### Linux / macOS / WSL2 / Android (Termux)
 ```bash
-curl -fsSL https://anika-agent.__NEW_DOMAIN__/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/tnvmac-web/Anika-Agent/main/scripts/install.sh | bash
 ```
 
 #### Windows (native)
 
 Run in powershell:
 ```powershell
-iex (irm https://anika-agent.__NEW_DOMAIN__/install.ps1) 
+iex (irm https://raw.githubusercontent.com/tnvmac-web/Anika-Agent/main/scripts/install.ps1)
 ```
 
 If you want to install & run Anika Desktop after a command-line only install, simply run
@@ -128,12 +128,12 @@ Running Anika as a dedicated unprivileged user (e.g. a `anika` systemd service a
 
 2. **As the unprivileged service user**, run the regular installer. It will detect the missing sudo, skip `--with-deps`, and install Chromium into the user's local Playwright cache:
    ```bash
-   curl -fsSL https://anika-agent.__NEW_DOMAIN__/install.sh | bash
+   curl -fsSL https://raw.githubusercontent.com/tnvmac-web/Anika-Agent/main/scripts/install.sh | bash
    ```
 
    If you want to skip the Playwright step entirely — for example because you're running headless and don't need browser automation — pass `--skip-browser`:
    ```bash
-   curl -fsSL https://anika-agent.__NEW_DOMAIN__/install.sh | bash -s -- --skip-browser
+   curl -fsSL https://raw.githubusercontent.com/tnvmac-web/Anika-Agent/main/scripts/install.sh | bash -s -- --skip-browser
    ```
 
    The installer also pre-installs [`cua-driver`](../user-guide/features/computer-use.md) so the Computer Use toolset works the moment you enable it; pass `--skip-computer-use` to opt out (it will then install on demand when you enable the tool).

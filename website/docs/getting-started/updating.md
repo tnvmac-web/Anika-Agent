@@ -199,7 +199,7 @@ You no longer need to wrap `anika update` in `screen` or `tmux` to survive a ter
 anika --version
 ```
 
-Compare against the latest release at the [GitHub releases page](https://github.com/__NEW_ORG__/anika-agent/releases).
+Compare against the latest release at the [GitHub releases page](https://github.com/tnvmac-web/Anika-Agent/releases).
 
 ### Updating from Messaging Platforms
 
@@ -263,7 +263,7 @@ Rolling back may cause config incompatibilities if new options were added. Run `
 
 ### Image-managed installs (Docker): the provenance marker
 
-Published Docker images bake a small read-only marker (`/etc/anika/image-provenance.json`) that authoritatively identifies the filesystem as image-managed. `anika update`, `anika update --check`, and the dashboard's Update button all consult it before touching anything: on an image-managed install they refuse cleanly (exit code 2), print the actual update command (`docker pull __NEW_ORG__/anika-agent:latest`), and write a `refused` receipt so fleet tooling can see the attempt happened. The marker wins even when a source checkout is bind-mounted into the container — the refusal is based on what the running filesystem *is*, not what it looks like. A damaged marker still refuses (fail-closed). Nix- and apt-managed installs refuse through the same gate using the existing detection.
+Published Docker images bake a small read-only marker (`/etc/anika/image-provenance.json`) that authoritatively identifies the filesystem as image-managed. `anika update`, `anika update --check`, and the dashboard's Update button all consult it before touching anything: on an image-managed install they refuse cleanly (exit code 2), print the actual update command (`docker pull tnvmac-web/anika-agent:latest`), and write a `refused` receipt so fleet tooling can see the attempt happened. The marker wins even when a source checkout is bind-mounted into the container — the refusal is based on what the running filesystem *is*, not what it looks like. A damaged marker still refuses (fail-closed). Nix- and apt-managed installs refuse through the same gate using the existing detection.
 
 ### Note for Nix users
 

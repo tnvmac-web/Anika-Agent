@@ -3,8 +3,8 @@
 // self-accept so this module's own reload doesn't reset the cache. Prod strips
 // import.meta.hot → byte-for-byte unchanged live unmount.
 
-import type { AnikaConnection } from '@/global'
 import type { AnikaGateway } from '@/anika'
+import type { AnikaConnection } from '@/global'
 
 export interface GatewaySurvivor {
   gateway: AnikaGateway

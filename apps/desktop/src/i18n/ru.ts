@@ -214,7 +214,7 @@ export const ru = defineLocale({
   },
 
   billingBlock: {
-    titleNous: 'Кредиты __NEW_ORG__ закончились',
+    titleNous: 'Кредиты Nous закончились',
     titleProvider: provider => `Кредиты закончились — ${provider}`,
     fallbackMessage: 'В вашем аккаунте закончились кредиты. Пополните баланс, чтобы продолжить.',
     openBilling: 'Открыть биллинг',

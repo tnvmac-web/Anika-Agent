@@ -49,7 +49,7 @@ development environment on the same layout the CLI, updater, lazy dependency
 installer, gateway, and docs assume.
 
 ```bash
-curl -fsSL https://anika-agent.__NEW_DOMAIN__/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/tnvmac-web/Anika-Agent/main/scripts/install.sh | bash
 cd "${ANIKA_HOME:-$HOME/.anika}/anika-agent"
 
 # Add dev/test extras on top of the standard install.
@@ -89,8 +89,8 @@ which silently destroys the running runtime mid-session. Keeping it outside the
 tree means no relative path from the workspace resolves to it.
 
 ```bash
-git clone https://github.com/__NEW_ORG__/anika-agent.git
-cd anika-agent
+git clone https://github.com/tnvmac-web/Anika-Agent.git
+cd Anika-Agent
 
 # Create venv with Python 3.11, OUTSIDE the source tree
 uv venv ~/.anika/venvs/anika-dev --python 3.11
@@ -286,7 +286,7 @@ When you ask Anika to review a PR in a repository that has `.agents/checks/`, te
 
 ## Reporting Issues
 
-- Use [GitHub Issues](https://github.com/__NEW_ORG__/anika-agent/issues)
+- Use [GitHub Issues](https://github.com/tnvmac-web/Anika-Agent/issues)
 - Include: OS, Python version, Anika version (`anika --version`), full error traceback
 - Include steps to reproduce
 - Check existing issues before creating duplicates
@@ -300,4 +300,4 @@ When you ask Anika to review a PR in a repository that has `.agents/checks/`, te
 
 ## License
 
-By contributing, you agree that your contributions will be licensed under the [MIT License](https://github.com/__NEW_ORG__/anika-agent/blob/main/LICENSE).
+By contributing, you agree that your contributions will be licensed under the [MIT License](https://github.com/tnvmac-web/Anika-Agent/blob/main/LICENSE).

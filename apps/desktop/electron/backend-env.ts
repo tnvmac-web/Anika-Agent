@@ -150,11 +150,11 @@ function buildDesktopBackendEnv({
 }
 
 export {
+  anikaManagedNodePathEntries,
   appendUniquePathEntries,
   buildDesktopBackendEnv,
   buildDesktopBackendPath,
   delimiterForPlatform,
-  anikaManagedNodePathEntries,
   normalizeAnikaHomeRoot,
   pathEnvKey,
   POSIX_SANE_PATH_ENTRIES

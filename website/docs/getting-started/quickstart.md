@@ -48,21 +48,21 @@ Pick the row that matches your goal:
 
 ## 1. Install Anika Agent
 ### With the Anika Desktop installer on macOS or Windows (recommended)
-To easily install the command-line and desktop applications, [download the Anika Desktop installer](https://anika-agent.__NEW_DOMAIN__/) from our website and run it.
+To easily install the command-line and desktop applications, [download the Anika Desktop installer](https://github.com/tnvmac-web/Anika-Agent/releases) from GitHub Releases and run it.
 
 ### Without Anika Desktop:
 For a command-line only install without Anika Desktop, run:
 
 #### Linux / macOS / WSL2 / Android (Termux)
 ```bash
-curl -fsSL https://anika-agent.__NEW_DOMAIN__/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/tnvmac-web/Anika-Agent/main/scripts/install.sh | bash
 ```
 
 #### Windows (native)
 
 Run in powershell:
 ```powershell
-iex (irm https://anika-agent.__NEW_DOMAIN__/install.ps1) 
+iex (irm https://raw.githubusercontent.com/tnvmac-web/Anika-Agent/main/scripts/install.ps1)
 ```
 
 :::tip Android / Termux

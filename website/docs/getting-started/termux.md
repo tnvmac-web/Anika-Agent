@@ -83,7 +83,7 @@ Packaging/repository/signing problems for this option should be reported to the 
 Anika now ships a Termux-aware installer path:
 
 ```bash
-curl -fsSL https://anika-agent.__NEW_DOMAIN__/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/tnvmac-web/Anika-Agent/main/scripts/install.sh | bash
 ```
 
 On Termux, the installer automatically:
@@ -135,8 +135,8 @@ Then use `python3.13` in place of `python` in the commands below
 ### 2. Clone Anika
 
 ```bash
-git clone https://github.com/__NEW_ORG__/anika-agent.git
-cd anika-agent
+git clone https://github.com/tnvmac-web/Anika-Agent.git
+cd Anika-Agent
 ```
 
 ### 3. Create a virtual environment

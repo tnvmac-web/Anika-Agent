@@ -29,12 +29,12 @@ import {
   shouldCloseOuterModalOnEscape,
 } from "@/lib/dashboard-modal-shell";
 import { formatTokenCount } from "@/lib/format";
-import { Button } from "@__NEW_ORG__/ui/ui/components/button";
-import { Spinner } from "@__NEW_ORG__/ui/ui/components/spinner";
-import { Stats } from "@__NEW_ORG__/ui/ui/components/stats";
-import { Card, CardContent, CardHeader, CardTitle } from "@__NEW_ORG__/ui/ui/components/card";
-import { Badge } from "@__NEW_ORG__/ui/ui/components/badge";
-import { Switch } from "@__NEW_ORG__/ui/ui/components/switch";
+import { Button } from "@nous-research/ui/ui/components/button";
+import { Spinner } from "@nous-research/ui/ui/components/spinner";
+import { Stats } from "@nous-research/ui/ui/components/stats";
+import { Card, CardContent, CardHeader, CardTitle } from "@nous-research/ui/ui/components/card";
+import { Badge } from "@nous-research/ui/ui/components/badge";
+import { Switch } from "@nous-research/ui/ui/components/switch";
 import { ConfirmDialog } from "@/components/ConfirmDialog";
 import { useModalBehavior } from "@/hooks/useModalBehavior";
 import { usePageHeader } from "@/contexts/usePageHeader";

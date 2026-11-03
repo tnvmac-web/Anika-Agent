@@ -7,7 +7,7 @@ import type {
   ToolsetModelsResponse
 } from '@/types/anika'
 
-import { capabilityScoped, anikaApi, type ProfileScope, profileScoped } from './client'
+import { anikaApi, capabilityScoped, type ProfileScope, profileScoped } from './client'
 
 // The optional trailing `profile` on every capability fetcher below is the
 // Capabilities view's profile-scope override: it lets the Skills/Tools/MCP

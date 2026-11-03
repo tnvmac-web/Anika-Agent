@@ -8,7 +8,7 @@ import type {
   ModelOptionsResponse
 } from '@/types/anika'
 
-import { capabilityScoped, anikaApi, type ProfileScope, profileScoped, STARTUP_REQUEST_TIMEOUT_MS } from './client'
+import { anikaApi, capabilityScoped, type ProfileScope, profileScoped, STARTUP_REQUEST_TIMEOUT_MS } from './client'
 
 export function getGlobalModelInfo(profile?: null | string): Promise<ModelInfoResponse> {
   return anikaApi<ModelInfoResponse>({

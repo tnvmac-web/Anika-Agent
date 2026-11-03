@@ -5,15 +5,15 @@
 # Anika Agent ☤
 
 <p align="center">
-  <a href="https://anika-agent.__NEW_DOMAIN__/docs/"><img src="https://img.shields.io/badge/Docs-anika--agent.__NEW_DOMAIN__-FFD700?style=for-the-badge" alt="Documentation"></a>
+  <a href="https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs"><img src="https://img.shields.io/badge/Docs-GitHub-FFD700?style=for-the-badge" alt="Documentation"></a>
   <a href="https://discord.gg/__NEW_ORG__"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
-  <a href="https://github.com/__NEW_ORG__/anika-agent/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License: MIT"></a>
-  <a href="https://__NEW_DOMAIN__"><img src="https://img.shields.io/badge/Built%20by-__NEW_ORG__-blueviolet?style=for-the-badge" alt="Built by __NEW_ORG__"></a>
+  <a href="https://github.com/tnvmac-web/Anika-Agent/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License: MIT"></a>
+  <a href="https://github.com/tnvmac-web/Anika-Agent"><img src="https://img.shields.io/badge/Built%20by-__NEW_ORG__-blueviolet?style=for-the-badge" alt="Built by __NEW_ORG__"></a>
   <a href="README.md"><img src="https://img.shields.io/badge/Lang-English-lightgrey?style=for-the-badge" alt="English"></a>
   <a href="README.ur-pk.md"><img src="https://img.shields.io/badge/Lang-اردو-green?style=for-the-badge" alt="اردو"></a>
 </p>
 
-**由 [__NEW_ORG__](https://__NEW_DOMAIN__) 构建的自进化 AI 代理。** 它是唯一内置学习闭环的智能代理——从经验中创建技能，在使用中改进技能，主动持久化知识，搜索过往对话，并在跨会话中逐步构建对你的深度理解。可以在 $5 的 VPS 上运行，也可以在 GPU 集群上运行，或者使用几乎零成本的 Serverless 基础设施。它不绑定你的笔记本——你可以在 Telegram 上与它对话，而它在云端 VM 上工作。
+**由 [__NEW_ORG__](https://github.com/tnvmac-web/Anika-Agent) 构建的自进化 AI 代理。** 它是唯一内置学习闭环的智能代理——从经验中创建技能，在使用中改进技能，主动持久化知识，搜索过往对话，并在跨会话中逐步构建对你的深度理解。可以在 $5 的 VPS 上运行，也可以在 GPU 集群上运行，或者使用几乎零成本的 Serverless 基础设施。它不绑定你的笔记本——你可以在 Telegram 上与它对话，而它在云端 VM 上工作。
 
 支持任意模型——[__NEW_ORG__ Portal](https://portal.__NEW_DOMAIN__)、[OpenRouter](https://openrouter.ai)（200+ 模型）、[NVIDIA NIM](https://build.nvidia.com)（Nemotron）、[小米 MiMo](https://platform.xiaomimimo.com)、[z.ai/GLM](https://z.ai)、[Kimi/Moonshot](https://platform.moonshot.ai)、[MiniMax](https://www.minimax.io)、[Hugging Face](https://huggingface.co)、OpenAI，或自定义端点。使用 `anika model` 即可切换——无需改代码，无锁定。
 
@@ -32,16 +32,28 @@
 ## 快速安装
 
 ```bash
-curl -fsSL https://anika-agent.__NEW_DOMAIN__/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/tnvmac-web/Anika-Agent/main/scripts/install.sh | bash
 ```
 
-支持 Linux、macOS、WSL2 和 Android (Termux)。安装程序会自动处理平台特定的配置。
+支持 Linux、macOS 和 WSL2。安装程序会自动处理平台特定的配置。
 
-> **Android / Termux：** 已测试的手动安装路径请参考 [Termux 指南](https://anika-agent.__NEW_DOMAIN__/docs/getting-started/termux)。在 Termux 上，Anika 会安装精选的 `.[termux]` 扩展，因为完整的 `.[all]` 扩展会拉取 Android 不兼容的语音依赖。
+### Android (Termux)
+
+```bash
+pkg update
+pkg install -y git python clang rust make pkg-config libffi openssl ca-certificates curl
+curl -fsSL https://raw.githubusercontent.com/tnvmac-web/Anika-Agent/main/scripts/install.sh | bash
+```
+
+安装程序会选择 Anika 支持的 Python 版本 (`>=3.11,<3.14`)，优先安装
+`.[termux-all]`，失败时回退到 `.[termux]`，并将 `anika` 命令链接到
+`$PREFIX/bin`。Android 上请勿安装 `.[all]`，其中包含 Termux 不支持的依赖。
+手动安装步骤和平台限制请参阅
+[Termux 安装指南](https://github.com/tnvmac-web/Anika-Agent/blob/main/website/docs/getting-started/termux.md)。
 >
 > **Windows：** 在 PowerShell 中运行：
 > ```powershell
-> iex (irm https://anika-agent.__NEW_DOMAIN__/install.ps1)
+> iex (irm https://raw.githubusercontent.com/tnvmac-web/Anika-Agent/main/scripts/install.ps1)
 > ```
 > 安装完成后，可能需要重启终端，然后运行 `anika` 开始对话。
 
@@ -68,7 +80,7 @@ anika update       # 更新到最新版本
 anika doctor       # 诊断问题
 ```
 
-📖 **[完整文档 →](https://anika-agent.__NEW_DOMAIN__/docs/)**
+📖 **[完整文档 →](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs)**
 
 ---
 
@@ -85,7 +97,7 @@ Anika 始终允许你使用任意服务商，这点不会改变。但如果你�
 anika setup --portal
 ```
 
-它会通过 OAuth 登录、把 __NEW_ORG__ 设为推理服务商，并启用 Tool Gateway。随时用 `anika portal info` 查看路由状态。完整说明见 [Tool Gateway 文档](https://anika-agent.__NEW_DOMAIN__/docs/user-guide/features/tool-gateway)。
+它会通过 OAuth 登录、把 __NEW_ORG__ 设为推理服务商，并启用 Tool Gateway。随时用 `anika portal info` 查看路由状态。完整说明见 [Tool Gateway 文档](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs)。
 
 你随时可以按工具单独切回自己的 API Key — Gateway 是按工具粒度生效的，不是一刀切。
 
@@ -107,31 +119,31 @@ Anika 有两种入口：用 `anika` 启动终端 UI，或运行网关从 Telegra
 | 中断当前工作 | `Ctrl+C` 或发送新消息 | `/stop` 或发送新消息 |
 | 平台特定状态 | `/platforms` | `/status`、`/sethome` |
 
-完整命令列表请参阅 [CLI 指南](https://anika-agent.__NEW_DOMAIN__/docs/user-guide/cli) 和 [消息网关指南](https://anika-agent.__NEW_DOMAIN__/docs/user-guide/messaging)。
+完整命令列表请参阅 [CLI 指南](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs) 和 [消息网关指南](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs)。
 
 ---
 
 ## 文档
 
-所有文档位于 **[anika-agent.__NEW_DOMAIN__/docs](https://anika-agent.__NEW_DOMAIN__/docs/)**：
+所有文档位于 **[仓库文档目录](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs)**：
 
 | 章节 | 内容 |
 |------|------|
-| [快速开始](https://anika-agent.__NEW_DOMAIN__/docs/getting-started/quickstart) | 安装 → 设置 → 2 分钟内开始首次对话 |
-| [CLI 使用](https://anika-agent.__NEW_DOMAIN__/docs/user-guide/cli) | 命令、快捷键、人格、会话 |
-| [配置](https://anika-agent.__NEW_DOMAIN__/docs/user-guide/configuration) | 配置文件、提供商、模型、所有选项 |
-| [消息网关](https://anika-agent.__NEW_DOMAIN__/docs/user-guide/messaging) | Telegram、Discord、Slack、WhatsApp、Signal、Home Assistant |
-| [安全](https://anika-agent.__NEW_DOMAIN__/docs/user-guide/security) | 命令审批、DM 配对、容器隔离 |
-| [工具与工具集](https://anika-agent.__NEW_DOMAIN__/docs/user-guide/features/tools) | 40+ 工具、工具集系统、终端后端 |
-| [技能系统](https://anika-agent.__NEW_DOMAIN__/docs/user-guide/features/skills) | 过程记忆、技能中心、创建技能 |
-| [记忆](https://anika-agent.__NEW_DOMAIN__/docs/user-guide/features/memory) | 持久记忆、用户画像、最佳实践 |
-| [MCP 集成](https://anika-agent.__NEW_DOMAIN__/docs/user-guide/features/mcp) | 连接任意 MCP 服务器扩展能力 |
-| [定时调度](https://anika-agent.__NEW_DOMAIN__/docs/user-guide/features/cron) | 定时任务与平台投递 |
-| [上下文文件](https://anika-agent.__NEW_DOMAIN__/docs/user-guide/features/context-files) | 影响每次对话的项目上下文 |
-| [架构](https://anika-agent.__NEW_DOMAIN__/docs/developer-guide/architecture) | 项目结构、代理循环、关键类 |
-| [贡献](https://anika-agent.__NEW_DOMAIN__/docs/developer-guide/contributing) | 开发设置、PR 流程、代码风格 |
-| [CLI 参考](https://anika-agent.__NEW_DOMAIN__/docs/reference/cli-commands) | 所有命令和标志 |
-| [环境变量](https://anika-agent.__NEW_DOMAIN__/docs/reference/environment-variables) | 完整环境变量参考 |
+| [快速开始](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs) | 安装 → 设置 → 2 分钟内开始首次对话 |
+| [CLI 使用](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs) | 命令、快捷键、人格、会话 |
+| [配置](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs) | 配置文件、提供商、模型、所有选项 |
+| [消息网关](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs) | Telegram、Discord、Slack、WhatsApp、Signal、Home Assistant |
+| [安全](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs) | 命令审批、DM 配对、容器隔离 |
+| [工具与工具集](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs) | 40+ 工具、工具集系统、终端后端 |
+| [技能系统](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs) | 过程记忆、技能中心、创建技能 |
+| [记忆](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs) | 持久记忆、用户画像、最佳实践 |
+| [MCP 集成](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs) | 连接任意 MCP 服务器扩展能力 |
+| [定时调度](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs) | 定时任务与平台投递 |
+| [上下文文件](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs) | 影响每次对话的项目上下文 |
+| [架构](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs) | 项目结构、代理循环、关键类 |
+| [贡献](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs) | 开发设置、PR 流程、代码风格 |
+| [CLI 参考](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs) | 所有命令和标志 |
+| [环境变量](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs) | 完整环境变量参考 |
 
 ---
 
@@ -166,14 +178,14 @@ anika claw migrate --overwrite  # 覆盖已有冲突
 
 ## 贡献
 
-欢迎贡献！请参阅 [贡献指南](https://anika-agent.__NEW_DOMAIN__/docs/developer-guide/contributing) 了解开发设置、代码风格和 PR 流程。
+欢迎贡献！请参阅 [贡献指南](https://github.com/tnvmac-web/Anika-Agent/tree/main/website/docs) 了解开发设置、代码风格和 PR 流程。
 
 贡献者快速开始——使用标准安装器，然后在它创建的完整 git checkout 中开发：
 `$ANIKA_HOME/anika-agent`（通常是 `~/.anika/anika-agent`）。这会匹配
 `anika update`、托管 venv、lazy dependencies、gateway 和 docs tooling 使用的布局。
 
 ```bash
-curl -fsSL https://anika-agent.__NEW_DOMAIN__/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/tnvmac-web/Anika-Agent/main/scripts/install.sh | bash
 cd "${ANIKA_HOME:-$HOME/.anika}/anika-agent"
 uv pip install -e ".[all,dev]"
 scripts/run_tests.sh
@@ -195,8 +207,8 @@ python -m pytest tests/ -q
 
 - 💬 [Discord](https://discord.gg/__NEW_ORG__)
 - 📚 [技能中心](https://agentskills.io)
-- 🐛 [问题反馈](https://github.com/__NEW_ORG__/anika-agent/issues)
-- 💡 [讨论区](https://github.com/__NEW_ORG__/anika-agent/discussions)
+- 🐛 [问题反馈](https://github.com/tnvmac-web/Anika-Agent/issues)
+- 💡 [反馈与建议](https://github.com/tnvmac-web/Anika-Agent/issues)
 - 🔌 [AnikaClaw](https://github.com/AaronWong1999/anikaclaw) — 社区微信桥接：在同一微信账号上运行 Anika Agent 和 OpenClaw。
 
 ---
@@ -205,4 +217,4 @@ python -m pytest tests/ -q
 
 MIT — 详见 [LICENSE](LICENSE)。
 
-由 [__NEW_ORG__](https://__NEW_DOMAIN__) 构建。
+由 [__NEW_ORG__](https://github.com/tnvmac-web/Anika-Agent) 构建。

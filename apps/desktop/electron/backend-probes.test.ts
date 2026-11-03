@@ -13,9 +13,9 @@ import path from 'node:path'
 import { test } from 'vitest'
 
 import {
+  anikaRuntimeImportProbe,
   canImportAnikaCli,
   DEFAULT_PROBE_TIMEOUT_MS,
-  anikaRuntimeImportProbe,
   PROBE_TIMEOUT_MS,
   resolveProbeTimeoutMs,
   shouldTrustAnikaOverride,

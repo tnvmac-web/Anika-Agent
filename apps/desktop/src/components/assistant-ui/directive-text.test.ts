@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { formatRefValue, anikaDirectiveFormatter } from './directive-text'
+import { anikaDirectiveFormatter, formatRefValue } from './directive-text'
 
 describe('formatRefValue', () => {
   it('leaves simple paths untouched', () => {

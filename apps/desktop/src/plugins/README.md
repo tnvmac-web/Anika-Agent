@@ -7,9 +7,8 @@ the same inventory + live enable/disable contract as runtime plugins.
 Keep this tree for real shipped plugins (and the small authoring fixtures that
 dogfood the SDK). One-off demos that rebuild a core chrome piece 1:1 do not
 belong here — they double the UI and confuse Settings ▸ Plugins. Publish those
-in the companion
-[`anika-example-plugins`](https://github.com/__NEW_ORG__/anika-example-plugins)
-repo instead.
+as external desktop plugins; see the
+[desktop plugin SDK guide](../../../../website/docs/developer-guide/desktop-plugin-sdk.md).
 
 User- and agent-authored plugins load at runtime from
 `$ANIKA_HOME/desktop-plugins/<name>/plugin.js` (the disk door) — see the

@@ -1,8 +1,8 @@
 import { LOCAL_CONNECTION_ID } from '@anika/shared'
 import { atom, batch, computed } from 'nanostores'
 
+import { anikaApi, getProfiles, setApiRequestProfile, STARTUP_REQUEST_TIMEOUT_MS } from '@/anika'
 import type { AnikaConnection } from '@/global'
-import { getProfiles, anikaApi, setApiRequestProfile, STARTUP_REQUEST_TIMEOUT_MS } from '@/anika'
 import { invalidateProfileScopedQueries } from '@/lib/query-client'
 import {
   arraysEqual,

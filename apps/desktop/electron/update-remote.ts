@@ -13,7 +13,7 @@
  */
 
 const OFFICIAL_REPO_HTTPS_URL = 'https://github.com/__NEW_ORG__/anika-agent.git'
-const OFFICIAL_REPO_CANONICAL = 'github.com/__NEW_ORG__/anika-agent'
+const OFFICIAL_REPO_CANONICAL = 'github.com/__new_org__/anika-agent'
 
 // Normalize common GitHub remote URL forms to `host/owner/repo` (lowercased,
 // no trailing slash, no .git suffix) so SSH and HTTPS forms of the same repo

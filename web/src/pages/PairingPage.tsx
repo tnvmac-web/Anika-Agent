@@ -1,16 +1,16 @@
 import { useCallback, useEffect, useLayoutEffect, useState } from "react";
 import { Check, ShieldCheck, Trash2, Users, X } from "lucide-react";
-import { Badge } from "@__NEW_ORG__/ui/ui/components/badge";
-import { Button } from "@__NEW_ORG__/ui/ui/components/button";
-import { Spinner } from "@__NEW_ORG__/ui/ui/components/spinner";
-import { H2 } from "@__NEW_ORG__/ui/ui/components/typography/h2";
+import { Badge } from "@nous-research/ui/ui/components/badge";
+import { Button } from "@nous-research/ui/ui/components/button";
+import { Spinner } from "@nous-research/ui/ui/components/spinner";
+import { H2 } from "@nous-research/ui/ui/components/typography/h2";
 import { api } from "@/lib/api";
 import type { PairingResponse, PairingUser } from "@/lib/api";
 import { DeleteConfirmDialog } from "@/components/DeleteConfirmDialog";
-import { useToast } from "@__NEW_ORG__/ui/hooks/use-toast";
-import { useConfirmDelete } from "@__NEW_ORG__/ui/hooks/use-confirm-delete";
-import { Toast } from "@__NEW_ORG__/ui/ui/components/toast";
-import { Card, CardContent } from "@__NEW_ORG__/ui/ui/components/card";
+import { useToast } from "@nous-research/ui/hooks/use-toast";
+import { useConfirmDelete } from "@nous-research/ui/hooks/use-confirm-delete";
+import { Toast } from "@nous-research/ui/ui/components/toast";
+import { Card, CardContent } from "@nous-research/ui/ui/components/card";
 import { usePageHeader } from "@/contexts/usePageHeader";
 
 function getUserKey(user: PairingUser): string {

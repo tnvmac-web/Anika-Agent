@@ -5,10 +5,10 @@ import { $composerAttachments, type ComposerAttachment, updateComposerAttachment
 import { $connection } from '@/store/session'
 
 import {
+  ANIKA_PATHS_MIME,
   attachmentPreviewDataUrl,
   type DroppedFile,
   extractDroppedFiles,
-  ANIKA_PATHS_MIME,
   partitionDroppedFiles,
   useComposerActions
 } from './use-composer-actions'

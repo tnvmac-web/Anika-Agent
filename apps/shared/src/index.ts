@@ -101,12 +101,12 @@ export {
   type WindowsBackgroundMaterial
 } from './translucency'
 export {
+  type AnikaWebSocketUrlOptions,
   buildAnikaWebSocketUrl,
   type GatewayAuthMode,
   GatewayReauthRequiredError,
   type GatewayWsConnection,
   type GatewayWsUrlResult,
-  type AnikaWebSocketUrlOptions,
   isGatewayReauthRequired,
   resolveGatewayWsUrl,
   type ResolveGatewayWsUrlDeps,

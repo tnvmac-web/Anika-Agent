@@ -1,14 +1,14 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router";
-import { H2 } from "@__NEW_ORG__/ui/ui/components/typography/h2";
-import { Card, CardContent } from "@__NEW_ORG__/ui/ui/components/card";
-import { Badge } from "@__NEW_ORG__/ui/ui/components/badge";
-import { Button } from "@__NEW_ORG__/ui/ui/components/button";
-import { Input } from "@__NEW_ORG__/ui/ui/components/input";
-import { Label } from "@__NEW_ORG__/ui/ui/components/label";
-import { Checkbox } from "@__NEW_ORG__/ui/ui/components/checkbox";
-import { Toast } from "@__NEW_ORG__/ui/ui/components/toast";
-import { useToast } from "@__NEW_ORG__/ui/hooks/use-toast";
+import { H2 } from "@nous-research/ui/ui/components/typography/h2";
+import { Card, CardContent } from "@nous-research/ui/ui/components/card";
+import { Badge } from "@nous-research/ui/ui/components/badge";
+import { Button } from "@nous-research/ui/ui/components/button";
+import { Input } from "@nous-research/ui/ui/components/input";
+import { Label } from "@nous-research/ui/ui/components/label";
+import { Checkbox } from "@nous-research/ui/ui/components/checkbox";
+import { Toast } from "@nous-research/ui/ui/components/toast";
+import { useToast } from "@nous-research/ui/hooks/use-toast";
 import { api } from "@/lib/api";
 import type {
   McpHttpAuth,

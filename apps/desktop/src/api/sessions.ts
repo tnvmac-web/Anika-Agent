@@ -10,7 +10,7 @@ import type {
   SessionSearchResponse
 } from '@/types/anika'
 
-import { capabilityScoped, getApiRequestConnection, anikaApi, type ProfileScope, profileScoped } from './client'
+import { anikaApi, capabilityScoped, getApiRequestConnection, type ProfileScope, profileScoped } from './client'
 
 const SESSION_LIST_REQUEST_TIMEOUT_MS = 60_000
 

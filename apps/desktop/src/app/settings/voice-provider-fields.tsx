@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { useEffect, useMemo, useRef, useState } from 'react'
 
-import { getElevenLabsVoices, getAnikaConfigSchema, saveAnikaConfig } from '@/anika'
+import { getAnikaConfigSchema, getElevenLabsVoices, saveAnikaConfig } from '@/anika'
 import { useI18n } from '@/i18n'
 import { notifyError } from '@/store/notifications'
 import type { AnikaConfigRecord } from '@/types/anika'
