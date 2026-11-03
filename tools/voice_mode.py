@@ -278,6 +278,7 @@ def detect_audio_environment() -> dict:
     warnings, notices = [], []
     termux_mic_cmd = _termux_microphone_command()
     termux_app_installed = _termux_api_app_installed()
+    termux_capture = bool(termux_mic_cmd and termux_app_installed)
     has_forwarded_audio = bool(
         os.environ.get('PULSE_SERVER') or os.environ.get('PIPEWIRE_REMOTE') or _pulse_socket_reachable())
 
@@ -286,7 +287,7 @@ def detect_audio_environment() -> dict:
 
     # SSH detection -- normally no audio devices, but honor a reachable sound server (PulseAudio/PipeWire
     # socket or forwarding env vars), which works fine over SSH (issue #35622).
-    if any(os.environ.get(v) for v in ('SSH_CLIENT', 'SSH_TTY', 'SSH_CONNECTION')):
+    if not termux_capture and any(os.environ.get(v) for v in ('SSH_CLIENT', 'SSH_TTY', 'SSH_CONNECTION')):
         report("Running over SSH with a reachable PulseAudio/PipeWire sound server",
                "Running over SSH -- no audio devices available.\n"
                "  If a sound server (PulseAudio/PipeWire) is running on this host,\n"
@@ -298,7 +299,7 @@ def detect_audio_environment() -> dict:
     # PulseAudio/PipeWire socket into the container and points PULSE_SERVER / PIPEWIRE_REMOTE at it, audio
     # works fine (issue #21203). Only block when no forwarding is configured.
     from anika_constants import is_container
-    if is_container():
+    if not termux_capture and is_container():
         report("Running inside container (Docker/Podman/LXC) with host audio forwarding",
                "Running inside container (Docker/Podman/LXC) -- no audio devices.\n"
                "  Forward host audio with one of (substitute $XDG_RUNTIME_DIR for your runtime dir,\n"
