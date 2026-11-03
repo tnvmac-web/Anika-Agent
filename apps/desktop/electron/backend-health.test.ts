@@ -513,7 +513,7 @@ test('makeNousCloudBackendDownError produces the Cloud shape and preserves cause
   assert.equal((result as any).isCloudBackendDown, true)
   assert.equal((result as any).statusCode, 503)
   assert.equal((result as any).cause, err)
-  assert.ok(result?.message.includes('__NEW_ORG__ Cloud agent ares-3009.agents.__NEW_DOMAIN__ is down'))
+  assert.ok(result?.message.includes('__NEW_ORG__ Cloud agent ares-3009.agents.__new_domain__ is down'))
 })
 
 test('makeNousCloudBackendDownError returns null for a Cloud 401 (routes to reauth)', () => {

@@ -32,8 +32,8 @@ test('canonicalGitHubRemote normalizes SSH and HTTPS forms to the same value', (
   assert.equal(canonicalGitHubRemote('git@github.com:__NEW_ORG__/anika-agent'), OFFICIAL_REPO_CANONICAL)
   assert.equal(canonicalGitHubRemote('ssh://git@github.com/__NEW_ORG__/anika-agent.git'), OFFICIAL_REPO_CANONICAL)
   assert.equal(canonicalGitHubRemote('https://github.com/__NEW_ORG__/anika-agent.git'), OFFICIAL_REPO_CANONICAL)
-  // Case-insensitive: an uppercased owner still canonicalizes to the same repo.
-  assert.equal(canonicalGitHubRemote('git@github.com:__NEW_ORG__/anika-agent.git'), OFFICIAL_REPO_CANONICAL)
+  // Case-insensitive: uppercased owner/repo still canonicalizes to the same repo.
+  assert.equal(canonicalGitHubRemote('git@github.com:__NEW_ORG__/ANIKA-AGENT.git'), OFFICIAL_REPO_CANONICAL)
   // Trailing slashes are stripped.
   assert.equal(canonicalGitHubRemote('https://github.com/__NEW_ORG__/anika-agent/'), OFFICIAL_REPO_CANONICAL)
 })

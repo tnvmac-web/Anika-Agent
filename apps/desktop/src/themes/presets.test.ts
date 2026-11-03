@@ -47,6 +47,6 @@ describe('nous-alt is the retired Nous, not the default', () => {
     expect(BUILTIN_THEMES['nous-alt']).toBe(nousAltTheme)
     expect(BUILTIN_THEMES.nous).not.toBe(nousAltTheme)
     expect(nousAltTheme.darkColors?.background).toBe('#0D2F86')
-    expect(BUILTIN_THEMES.__NEW_ORG__.darkColors?.background).not.toBe(nousAltTheme.darkColors?.background)
+    expect(BUILTIN_THEMES.nous.darkColors?.background).not.toBe(nousAltTheme.darkColors?.background)
   })
 })

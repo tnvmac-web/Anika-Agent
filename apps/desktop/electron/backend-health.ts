@@ -154,7 +154,7 @@ export function isNousCloudAgentUrl(baseUrl: string): boolean {
   try {
     const host = new URL(baseUrl).hostname
 
-    return host.endsWith('.agents.__NEW_DOMAIN__')
+    return host.toLowerCase().endsWith('.agents.__new_domain__')
   } catch {
     return false
   }
